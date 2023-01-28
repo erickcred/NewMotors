@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+html {
+    overflow-x: hidden;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1366px;
+    width: 95%;
+}
+
+section h2 {
+    margin-bottom: 1rem;
+}
+section {
+    padding: 50px 0;
+}
+
+header,
+footer {
+    background-color: #192a56;
+    color: #fff;
+}
+header {
+    padding: 10px 0 0 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1
+}
+header > .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 16px 0;
+}
+header h1 {
+    color: #fff;
+}
+header #hamburguer {
+    border: solid 1px #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 40px;
+    padding: 9px 7px 0px 7px;
+}
+header #hamburguer span {
+    background-color: #fff;
+    width: 100%;
+    height: 2px;
+    margin-bottom: 7px;
+    display: block;
+}
+nav {
+    background-color:#575fcf;
+    padding: 16px 0;
+    display: none;
+}
+nav ul {
+    display: flex;
+    gap: 1.2rem;
+}
+nav ul li,
+nav ul li a {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    list-style: none;
+}
+
+.hero {
+    max-width: 100%;
+    overflow: none;
+}
+button.slick-next.slick-arrow {
+    display: none!important;
+}
+
+#sobre > .container {
+    display: flex;
+    gap: 1.5rem;
+}
+#sobre img {
+    height: 250px;
+}
+#sobre p {
+    margin-bottom: 20px
+}
+
+.lista-veiculos {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+}
+.lista-veiculos li {
+    max-width: calc(90% / 3);
+    margin-bottom: 50px;
+    list-style: none;
+}
+.lista-veiculos h3 {
+    margin: 16px 0;
+}
+ .lista-veiculos li img {
+    max-width: 100%;
+}
+.preco {
+    display: block;
+    margin: 1rem 0;
+}
+.preco del {
+    font-size: .9rem;
+    color: #797979;
+    margin-right: 10px;
+}
+
+button {
+    background-color: #119759;
+    border: none;
+    border-radius: 5px;
+    color: #e9e9e9;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
+    display: block;
+    padding: 8px 0;
+    width: 100%;
+}
+.lista-veiculos li button:hover {
+    background-color: #0d7042;
+}
+
+#promocoes {
+    background-color: #91919128;
+}
+#promocoes .lista-veiculos li {
+    margin-right: 1.2rem;
+}
+#promocoes .lista-veiculos li img {
+    max-width: 100%;
+}
+
+
+form {
+    max-width: 360px;
+}
+.form-campo {
+    margin-bottom: 1rem;
+}
+.form-campo label {
+    display: block;
+    font-weight: bold;
+}
+.form-campo input,
+.form-campo textarea {
+    display: block;
+    padding: 8px;
+    width: 100%;
+}
+.form-campo textarea {
+    resize: none;
+    height: 200px;
+}
+form button {
+    max-width: 120px;
+}
+
+
+footer {
+    padding-top: 3rem;
+    padding: 50px 0 30px 0;
+}
+footer > .container,
+footer ul {
+    display: flex;
+    justify-content: space-between;
+}
+footer ul {
+    gap: 1rem
+}
+footer ul li {
+    list-style: none;
+}
+footer ul li img {
+    height: 30px;
+}
+
+label.error {
+    background-color: rgba(255, 0, 0, 0.384);
+    color: rgb(114, 4, 4);
+    padding: 5px 0;
+    text-align: center;
+}
+input.error {
+    border: 1px solid red;
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+    .container {
+        margin: 0 auto;
+        width: 90%;
+    }
+    #sobre > .container {
+        flex-direction: column-reverse;
+    }
+    #sobre img {
+        object-fit: cover;
+        object-position: center;
+    }
+    .lista-veiculos li {
+        max-width: calc((100% / 2) - 1rem);
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        margin: 0 auto;
+        width: 90%;
+    }
+    header .container {
+        flex-direction: row;
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lista-veiculos li {
+        max-width: 100%;
+    }
+    #promocoes .lista-veiculos li {
+        max-width: 90%;
+    }
+    #promocoes .lista-veiculos li {
+        max-width: 300px;
+    }
+    #promocoes .lista-veiculos li img {
+        max-width: 100%;
+        object-fit: contain;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+
+    footer .container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5rem
+    }
+    footer ul {
+        margin: 0 auto;
+        max-width: 300px;
+        width: 100%;
+    }
+    footer .container p {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}
